@@ -1,11 +1,10 @@
 "use client";
 
 import { FormState } from "@/actions/common/types";
-import { login } from "@/actions/login";
+import { login } from "@/actions/auth/login";
 import { Button } from "@/components/ui/button";
 import { useFormState } from "react-dom";
-import LoginEmailInput from "./LoginEmailInput";
-import LoginPasswordInput from "./LoginPasswordInput";
+import FormTextInput from "@/features/Form/FormInput";
 
 const initialState: FormState = {
   message: "",
@@ -16,8 +15,19 @@ export default function LoginForm() {
 
   return (
     <form className="py-4" action={dispatch}>
-      <LoginEmailInput errors={state.errors} />
-      <LoginPasswordInput errors={state.errors} />
+      <FormTextInput
+        name="email"
+        label="Email"
+        placeholder="Please enter your email"
+        errors={state?.errors}
+      />
+      <FormTextInput
+        name="password"
+        label="Password"
+        type="password"
+        placeholder="Please enter your password"
+        errors={state?.errors}
+      />
       <div className="h-fit mt-4">
         <Button type="submit" className="w-full">
           Login

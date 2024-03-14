@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { FormState } from "./common/types";
+import { FormState } from "../common/types";
 import { redirect } from "next/navigation";
 
 const LoginFieldSchema = z.object({

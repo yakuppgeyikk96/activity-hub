@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "../../components/ui/navigation-menu";
-import LoginDialog from "../Login/LoginDialog";
+import AuthDialog from "../Auth/AuthDialog";
 
 export default function Navbar() {
   return (
@@ -32,7 +32,7 @@ export default function Navbar() {
         </NavigationMenu>
       </div>
       <div>
-        <LoginDialog />
+        <AuthDialog />
       </div>
     </nav>
   );

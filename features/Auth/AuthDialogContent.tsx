@@ -2,6 +2,7 @@ import { DialogContent } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import LoginForm from "./LoginForm";
+import SignupForm from "./Signup";
 
 export default function LoginDialogContent() {
   return (
@@ -17,6 +18,9 @@ export default function LoginDialogContent() {
         </TabsList>
         <TabsContent value="login">
           <LoginForm />
+        </TabsContent>
+        <TabsContent value="signup">
+          <SignupForm />
         </TabsContent>
       </Tabs>
     </DialogContent>

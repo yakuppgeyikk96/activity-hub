@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
-import LoginDialogContent from "./LoginDialogContent";
+import AuthDialogContent from "./AuthDialogContent";
 
-export default function LoginDialog() {
+export default function AuthDialogDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button>Login</Button>
       </DialogTrigger>
-      <LoginDialogContent />
+      <AuthDialogContent />
     </Dialog>
   );
 }
